@@ -1,3 +1,50 @@
+# Reproducing the Experiment with Google Gemini
+
+This repository is a fork of the original study, adapted to reproduce the N-back task experiment using Google's Gemini models instead of OpenAI's GPT models. The following steps outline how to set up the environment to run the modified experiment (`experiments/verbal_reproduce.ipynb`).
+
+### 1. Environment Setup
+
+It is recommended to use a virtual environment to manage dependencies.
+
+**Step 1: Create and Activate a Virtual Environment**
+
+Open a terminal in the project's root directory (`ChatGPT-WM-main`) and run the following commands:
+
+```bash
+# Create a virtual environment named .venv
+python -m venv .venv
+
+# Activate the virtual environment (on Windows)
+.\.venv\Scripts\activate
+```
+
+### 2. Install Dependencies
+
+Once the virtual environment is activated, install the required Python packages:
+
+```bash
+pip install google-generativeai python-dotenv matplotlib numpy pandas seaborn scipy tabulate
+```
+
+### 3. Configure API Key
+
+The script loads the Google Gemini API key from a `.env` file located in the project's root directory.
+
+**Step 1: Create the `.env` file**
+
+In the root directory `c:\Users\User\Desktop\FTEC5660_Individual project\ChatGPT-WM-main`, create a new file named `.env`.
+
+**Step 2: Add Your API Key**
+
+Open the `.env` file and add your Gemini API key in the following format:
+
+```
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+```
+
+Replace `"YOUR_GEMINI_API_KEY"` with your actual key. After completing these steps, you can run the Jupyter Notebook `experiments/verbal_reproduce.ipynb` to execute the experiment with the Gemini model.
+
+
 # Assessing Working Memory Capacity of Large Language Models (LLMs) Using N-back Tasks
 
 ![image](https://github.com/user-attachments/assets/f968575a-00be-4453-bc62-5d9237fa26fe)
